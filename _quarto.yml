@@ -8,7 +8,6 @@ website:
       - text: "Overview"
         menu: 
           - text: "Project Proposal"
-    
     right:
       - href: index.qmd
         text: Home
