@@ -1,0 +1,30 @@
+project:
+  type: website
+
+website:
+  title: "ISSS608-VAA-PROJECT"
+  navbar:
+    left:
+      - text: "Overview"
+        menu: 
+          - text: "Project Proposal"
+    
+    right:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: 
+      light: default
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-location: left
+    grid: 
+      body-width: 1500px
+      sidebar-width: 300px
+      margin-width:	150px
+
+editor: visual
