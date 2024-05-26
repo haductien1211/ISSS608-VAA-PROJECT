@@ -1,6 +1,9 @@
 ---
 title: "VAST Challenge 2024 Mini-Challenge 3"
-author: "Group 8"
+author: "Group 8: 
+        Ha Duc Tien, 
+        KWOK Pei Shan, 
+        Mohamad Hafez Bin SIDEK"
 date: "May 23, 2024"
 date-modified: "last-modified"
 execute: 
