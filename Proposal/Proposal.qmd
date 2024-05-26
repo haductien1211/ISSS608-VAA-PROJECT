@@ -1,0 +1,46 @@
+---
+title: "VAST Challenge 2024 Mini-Challenge 3"
+author: "Group 8"
+date: "May 23, 2024"
+date-modified: "last-modified"
+execute: 
+  eval: true
+  echo: true
+  warning: false
+  freeze: true
+---
+
+# 1. Overview
+
+The Oceanus business ecosystem is dynamic in nature, marked by the continual emergence of startups, mergers, acquisitions, and investments. FishEye International serves as a vigilant overseer of this landscape, meticulously monitoring the activities of commercial fishing operators to uphold the integrity of the region's marine ecosystem. Through comprehensive analysis of business records, FishEye endeavors to uncover ownership structures, shareholder dynamics, transactional histories, and the core offerings of each entity, culminating in the creation of CatchNet: the Oceanus Knowledge Graph, achieved through a meticulous blend of automated processes and manual review.
+
+Recent events have cast a shadow over Oceanus's commercial fishing sector, following the discovery of illegal fishing practices by SouthSeafood Express Corp. In response, FishEye has initiated an in-depth exploration to discern the temporal implications of this occurrence on Oceanus's fishing marketplace. The competitive landscape may witness a variety of reactions, ranging from aggressive maneuvers by industry players seeking to capitalize on voids left by SouthSeafood Express Corp, to a heightened awareness within the industry that unlawful activities will be met with diligent scrutiny and consequential action. This ongoing investigation underscores the significance of FishEye's role in maintaining the ethical and legal standards of Oceanus's commercial endeavors.
+
+
+# 2. Problem and Tasks
+
+This is based on the tasks and question from VAST Challenge 2024 Mini Challenge 3 or [MC3](https://vast-challenge.github.io/2024/MC3.html)
+
+A key element in stopping illegal fishing is holding the people who own nefarious companies accountable. Thus, FishEye is keenly interested in developing visualization tools that work with CatchNet to identify the people who hold influence over business networks. That is especially difficult with varied and changing shareholder and ownership relationships.
+
+  1. FishEye analysts want to better visualize changes in corporate structures over time. Create a visual analytics approach that analysts can use to highlight temporal patterns and changes in corporate structures. Examine the most active people and businesses using visual analytics.
+
+  2. Using your visualizations, find and display examples of typical and atypical business transactions (e.g., mergers, acquisitions, etc.). Can you infer the motivations behind changes in their activity?
+
+  3. Develop a visual approach to examine inferences. Infer how the influence of a company changes through time. Can you infer ownership or influence that a network may have?
+
+  4. Identify the network associated with SouthSeafood Express Corp and visualize how this network and competing businesses change as a result of their illegal fishing behavior. Which companies benefited from SouthSeafood Express Corp legal troubles? Are there other suspicious transactions that may be related to illegal fishing? Provide visual evidence for your conclusions.
+
+# 3. Approach
+
+The initial approach is to identify any abnormality in the data and perform the necessary data wrangling and cleaning, as well as some initial Data Exploration and Analysis. Afterward, we would move on to address each task in separation
+
+Task 1: For this task, we are planning to do some a network graph of corporate network that would change overtime when new event happened
+
+Task 2:
+
+Task 3:
+
+Task 4:
+
+

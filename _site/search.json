@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ISSS608-VAA-PROJECT",
+    "objectID": "Proposal/Proposal.html",
+    "href": "Proposal/Proposal.html",
+    "title": "VAST Challenge 2024 Mini-Challenge 3",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "1. Overview\nThe Oceanus business ecosystem is dynamic in nature, marked by the continual emergence of startups, mergers, acquisitions, and investments. FishEye International serves as a vigilant overseer of this landscape, meticulously monitoring the activities of commercial fishing operators to uphold the integrity of the region’s marine ecosystem. Through comprehensive analysis of business records, FishEye endeavors to uncover ownership structures, shareholder dynamics, transactional histories, and the core offerings of each entity, culminating in the creation of CatchNet: the Oceanus Knowledge Graph, achieved through a meticulous blend of automated processes and manual review.\nRecent events have cast a shadow over Oceanus’s commercial fishing sector, following the discovery of illegal fishing practices by SouthSeafood Express Corp. In response, FishEye has initiated an in-depth exploration to discern the temporal implications of this occurrence on Oceanus’s fishing marketplace. The competitive landscape may witness a variety of reactions, ranging from aggressive maneuvers by industry players seeking to capitalize on voids left by SouthSeafood Express Corp, to a heightened awareness within the industry that unlawful activities will be met with diligent scrutiny and consequential action. This ongoing investigation underscores the significance of FishEye’s role in maintaining the ethical and legal standards of Oceanus’s commercial endeavors.\n\n\n2. Problem and Tasks\nThis is based on the tasks and question from VAST Challenge 2024 Mini Challenge 3 or MC3\nA key element in stopping illegal fishing is holding the people who own nefarious companies accountable. Thus, FishEye is keenly interested in developing visualization tools that work with CatchNet to identify the people who hold influence over business networks. That is especially difficult with varied and changing shareholder and ownership relationships.\n\nFishEye analysts want to better visualize changes in corporate structures over time. Create a visual analytics approach that analysts can use to highlight temporal patterns and changes in corporate structures. Examine the most active people and businesses using visual analytics.\nUsing your visualizations, find and display examples of typical and atypical business transactions (e.g., mergers, acquisitions, etc.). Can you infer the motivations behind changes in their activity?\nDevelop a visual approach to examine inferences. Infer how the influence of a company changes through time. Can you infer ownership or influence that a network may have?\nIdentify the network associated with SouthSeafood Express Corp and visualize how this network and competing businesses change as a result of their illegal fishing behavior. Which companies benefited from SouthSeafood Express Corp legal troubles? Are there other suspicious transactions that may be related to illegal fishing? Provide visual evidence for your conclusions.\n\n\n\n3. Approach\nThe initial approach is to identify any abnormality in the data and perform the necessary data wrangling and cleaning, as well as some initial Data Exploration and Analysis. Afterward, we would move on to address each task in separation\nTask 1: For this task, we are planning to do some a network graph of corporate network that would change overtime when new event happened\nTask 2:\nTask 3:\nTask 4:"
   },
   {
     "objectID": "about.html",
@@ -12,5 +12,12 @@
     "title": "About",
     "section": "",
     "text": "This site is used to showcase the project for ISSS608-VAA"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ISSS608-VAA-PROJECT",
+    "section": "",
+    "text": "This is a Quarto website use to show case group project from ISSS608-VAA"
   }
 ]

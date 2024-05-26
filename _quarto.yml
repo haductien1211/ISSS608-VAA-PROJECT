@@ -6,8 +6,7 @@ website:
   navbar:
     left:
       - text: "Overview"
-        menu: 
-          - text: "Project Proposal"
+        href: "Proposal/Proposal.html"
     right:
       - href: index.qmd
         text: Home
