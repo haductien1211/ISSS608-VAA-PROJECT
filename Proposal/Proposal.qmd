@@ -38,13 +38,30 @@ A key element in stopping illegal fishing is holding the people who own nefariou
 
 The initial approach is to identify any abnormality in the data and perform the necessary data wrangling and cleaning, as well as some initial Data Exploration and Analysis. Afterward, we would move on to address each task in separation
 
-Task 1: For this task, we are planning to do some a network graph of corporate network that would change overtime when new event happened
+### Task 1: 
 
-Task 2:
+For this task, we are planning to do some network graph of corporate network that would change overtime when new event happens. The main visualization techniques are still under further discussion, but the main purpose is to highlight temporal changes to corporate structure based on individual related to these corporate and potentially their familial relation. At the moment, the idea that we have in mind is to have a visualization that look like [this](https://r4va.netlify.app/chap27#working-with-facet_edges-1) with a slider for time representation
 
-Task 3:
+![](Graph_1.png)
 
-Task 4:
+### Task 2:
+
+### Task 3: 
+
+For this task, we are planning to use centrality measures such as betweenness centrality and closeness centrality to measure the influence of a company 
+
+### Task 4: 
+
+For this task, we propose a comprehensive set of techniques aimed at identifying and analyzing the network associated with SouthSeafood Express Corp, visualizing network changes before and after illegal fishing behavior, reviewing revenue and market share changes, and detecting suspicious transactions related to illegal fishing activities. 
+
+First, to identify the network associated with SouthSeafood Express Corp, we will employ network graph dendrograms. These dendrograms will help us visualize the entities and relationships directly and indirectly connected to SouthSeafood Express Corp. By filtering the graph to include only relevant nodes and edges, we can highlight key nodes such as shareholders and partner companies, as well as critical edges like ownership and transaction relationships. The primary visualizations for this objective are network graphs, which will depict the entities connected to SouthSeafood Express Corp, and dendrograms, which will present a hierarchical tree structure of the connected entities. 
+
+Next, to visualize network changes before and after illegal fishing behavior, we will continue using network graph dendrograms. By creating dendrograms, we can visualize the hierarchical structure of company connections both before and after the incident. Hierarchical clustering will be used to group connected nodes and visualize their relationships. Nodes not connected to the main structure will be removed for clarity. Relevant visualizations for this objective include side-by-side dendrograms showing the network before and after the incident, and hierarchical cluster diagrams that illustrate the groupings of connected entities. 
+
+In reviewing revenue and market share changes before and after the incident, we will use revenue analysis and market share visualization techniques. For revenue analysis, bar charts will compare the revenue of companies before and after the incident, highlighting those that experienced significant changes. For market share analysis, pie charts will visualize market share changes among competitor's post-incident, identifying companies that benefited from the incident. The relevant visualizations here are bar charts for revenue comparison and pie charts for market share distribution before and after the incident. 
+To detect suspicious transactions related to illegal fishing, scatter plot analysis will be employed. Scatter plots will help us analyze transaction data and identify anomalies or spikes in revenue that could indicate suspicious transactions. By plotting revenue against time or other relevant variables, we can highlight unusual patterns or outliers. The visualizations for this objective include scatter plots to show revenue against time or other variables, box plots to identify outliers in revenue data, and histograms to analyze the distribution of revenue values and spot unusual concentrations. 
+
+By employing these techniques, analysts at FishEye can effectively visualize and understand the impact of SouthSeafood Express Corp's illegal activities on the network and market share, as well as detect any related suspicious transactions. This comprehensive approach combines network analysis, revenue and market share comparisons, and anomaly detection to provide clear and actionable insights into the dynamics of the Oceanus commercial fishing business community. 
 
 # 4. Shiny App
 

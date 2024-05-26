@@ -117,7 +117,13 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">1. Overview</a></li>
   <li><a href="#problem-and-tasks" id="toc-problem-and-tasks" class="nav-link" data-scroll-target="#problem-and-tasks">2. Problem and Tasks</a></li>
-  <li><a href="#approach" id="toc-approach" class="nav-link" data-scroll-target="#approach">3. Approach</a></li>
+  <li><a href="#approach" id="toc-approach" class="nav-link" data-scroll-target="#approach">3. Approach</a>
+  <ul class="collapse">
+  <li><a href="#task-1" id="toc-task-1" class="nav-link" data-scroll-target="#task-1">Task 1:</a></li>
+  <li><a href="#task-2" id="toc-task-2" class="nav-link" data-scroll-target="#task-2">Task 2:</a></li>
+  <li><a href="#task-3" id="toc-task-3" class="nav-link" data-scroll-target="#task-3">Task 3:</a></li>
+  <li><a href="#task-4" id="toc-task-4" class="nav-link" data-scroll-target="#task-4">Task 4:</a></li>
+  </ul></li>
   <li><a href="#shiny-app" id="toc-shiny-app" class="nav-link" data-scroll-target="#shiny-app">4. Shiny App</a></li>
   </ul>
 </nav>
@@ -183,10 +189,27 @@ ul.task-list li input[type="checkbox"] {
 <section id="approach" class="level1">
 <h1>3. Approach</h1>
 <p>The initial approach is to identify any abnormality in the data and perform the necessary data wrangling and cleaning, as well as some initial Data Exploration and Analysis. Afterward, we would move on to address each task in separation</p>
-<p>Task 1: For this task, we are planning to do some a network graph of corporate network that would change overtime when new event happened</p>
-<p>Task 2:</p>
-<p>Task 3:</p>
-<p>Task 4:</p>
+<section id="task-1" class="level3">
+<h3 class="anchored" data-anchor-id="task-1">Task 1:</h3>
+<p>For this task, we are planning to do some a network graph of corporate network that would change overtime when new event happened. The main visualization technique are still under further discussion but the main purpose is to showcase temporal changes to corporate structure based on individual related to these corporate. At the moment the idea that we have in mind is to have a visualization that look like <a href="https://r4va.netlify.app/chap27#working-with-facet_edges-1">this</a> with a slider for time representation</p>
+<p><img src="Graph_1.png" class="img-fluid"></p>
+</section>
+<section id="task-2" class="level3">
+<h3 class="anchored" data-anchor-id="task-2">Task 2:</h3>
+</section>
+<section id="task-3" class="level3">
+<h3 class="anchored" data-anchor-id="task-3">Task 3:</h3>
+<p>For this task, we are planning to use centrality measures such as betweenness centrality and closeness centrality to measure the influence of a company</p>
+</section>
+<section id="task-4" class="level3">
+<h3 class="anchored" data-anchor-id="task-4">Task 4:</h3>
+<p>For this task, we propose a comprehensive set of techniques aimed at identifying and analyzing the network associated with SouthSeafood Express Corp, visualizing network changes before and after illegal fishing behavior, reviewing revenue and market share changes, and detecting suspicious transactions related to illegal fishing activities.</p>
+<p>First, to identify the network associated with SouthSeafood Express Corp, we will employ network graph dendrograms. These dendrograms will help us visualize the entities and relationships directly and indirectly connected to SouthSeafood Express Corp.&nbsp;By filtering the graph to include only relevant nodes and edges, we can highlight key nodes such as shareholders and partner companies, as well as critical edges like ownership and transaction relationships. The primary visualizations for this objective are network graphs, which will depict the entities connected to SouthSeafood Express Corp, and dendrograms, which will present a hierarchical tree structure of the connected entities.</p>
+<p>Next, to visualize network changes before and after illegal fishing behavior, we will continue using network graph dendrograms. By creating dendrograms, we can visualize the hierarchical structure of company connections both before and after the incident. Hierarchical clustering will be used to group connected nodes and visualize their relationships. Nodes not connected to the main structure will be removed for clarity. Relevant visualizations for this objective include side-by-side dendrograms showing the network before and after the incident, and hierarchical cluster diagrams that illustrate the groupings of connected entities.</p>
+<p>In reviewing revenue and market share changes before and after the incident, we will use revenue analysis and market share visualization techniques. For revenue analysis, bar charts will compare the revenue of companies before and after the incident, highlighting those that experienced significant changes. For market share analysis, pie charts will visualize market share changes among competitors post-incident, identifying companies that benefited from the incident. The relevant visualizations here are bar charts for revenue comparison and pie charts for market share distribution before and after the incident.</p>
+<p>To detect suspicious transactions related to illegal fishing, scatter plot analysis will be employed. Scatter plots will help us analyze transaction data and identify anomalies or spikes in revenue that could indicate suspicious transactions. By plotting revenue against time or other relevant variables, we can highlight unusual patterns or outliers. The visualizations for this objective include scatter plots to show revenue against time or other variables, box plots to identify outliers in revenue data, and histograms to analyze the distribution of revenue values and spot unusual concentrations.</p>
+<p>By employing these techniques, analysts at FishEye can effectively visualize and understand the impact of SouthSeafood Express Corp’s illegal activities on the network and market share, as well as detect any related suspicious transactions. This comprehensive approach combines network analysis, revenue and market share comparisons, and anomaly detection to provide clear and actionable insights into the dynamics of the Oceanus commercial fishing business community.</p>
+</section>
 </section>
 <section id="shiny-app" class="level1">
 <h1>4. Shiny App</h1>
