@@ -12,7 +12,7 @@ execute:
 
 # 1. Overview
 
-The Oceanus business ecosystem is dynamic in nature, marked by the continual emergence of startups, mergers, acquisitions, and investments. FishEye International serves as a vigilant overseer of this landscape, meticulously monitoring the activities of commercial fishing operators to uphold the integrity of the region's marine ecosystem. Through comprehensive analysis of business records, FishEye endeavors to uncover ownership structures, shareholder dynamics, transactional histories, and the core offerings of each entity, culminating in the creation of CatchNet: the Oceanus Knowledge Graph, achieved through a meticulous blend of automated processes and manual review.
+The Oceanus business ecosystem is dynamic in nature, marked by the continual emergence of startups, mergers, acquisitions, and investments. FishEye International serves as a vigilant overseer of this landscape, meticulously monitoring the activities of commercial fishing operators to uphold the integrity of the region's marine ecosystem. Through comprehensive analysis of business records, FishEye endeavors to uncover ownership structures, shareholder dynamics, transactional histories, and the core offerings of each entity, culminating in the creation of CatchNet: the Oceanus Knowledge Graph, achieved through a blend of automated processes and manual review.
 
 Recent events have cast a shadow over Oceanus's commercial fishing sector, following the discovery of illegal fishing practices by SouthSeafood Express Corp. In response, FishEye has initiated an in-depth exploration to discern the temporal implications of this occurrence on Oceanus's fishing marketplace. The competitive landscape may witness a variety of reactions, ranging from aggressive maneuvers by industry players seeking to capitalize on voids left by SouthSeafood Express Corp, to a heightened awareness within the industry that unlawful activities will be met with diligent scrutiny and consequential action. This ongoing investigation underscores the significance of FishEye's role in maintaining the ethical and legal standards of Oceanus's commercial endeavors.
 
@@ -43,4 +43,6 @@ Task 3:
 
 Task 4:
 
+# 4. Shiny App
 
+Shiny App will tentatively come with interactive Graphs and Network Graph visualization. It will consist of several tabs, showcasing different graphs related to each of the tasks:
