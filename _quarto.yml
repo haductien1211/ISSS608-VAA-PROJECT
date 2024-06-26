@@ -7,10 +7,10 @@ website:
     left:
       - text: "Proposal"
         href: "Proposal/Proposal.html"
+      - text: "Prototype"
+        href: "Prototype/Prototype.html"
       - text: "Poster"
         href: "Poster/Poster.html"
-      - text: "Prototype"
-        href: "Prototype/Prototype.html"  
     right:
       - href: index.qmd
         text: Home
