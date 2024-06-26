@@ -12,7 +12,6 @@ execute:
   warning: false
   freeze: true
   code-fold: true
-  code-summary: "Show the code"
 ---
 
 # I. The Data
@@ -785,6 +784,7 @@ To summarize the observations above
 ```{r}
 #| code-fold: true
 #| code-summary: "Show the code"
+
 mc3_nodes_id <- mc3_nodes %>%
   rename(label = id) %>%
   mutate(id = row_number()) %>%
@@ -842,9 +842,11 @@ relationship = 48
 
 ```
 
+
 ```{r}
 #| code-fold: true
 #| code-summary: "Show the code"
+
 relationship_count <- mc3_edges %>%
   filter(type %in% c("Event.Owns.BeneficialOwnership",
                      "Event.Owns.Shareholdership",
@@ -873,6 +875,7 @@ Company_list <-
 ```{r}
 #| code-fold: true
 #| code-summary: "Show the code"
+
 edges <- mc3_edges_id %>%
   filter(start_date <= filter_date) %>%
   filter(target %in% Company_list$target)
@@ -926,7 +929,6 @@ glimpse(nodes)
 #| code-fold: true
 #| code-summary: "Show the code"
 
-
 nodes <- transform(nodes,
                    `Company` = ifelse(
                      nodes_type %in% c("Entity.Organization.Company",
@@ -941,7 +943,7 @@ nodes <- transform(nodes,
 ```{r}
 #| code-fold: true
 #| code-summary: "Show the code"
-#| 
+
 visNetwork(nodes, edges) %>%
   visLayout(randomSeed = 1234) %>%
   addFontAwesome()%>%
