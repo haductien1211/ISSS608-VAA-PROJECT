@@ -1,5 +1,9 @@
 ---
-title: "ISSS608-VAA-PROJECT"
+title: "VAST Challenge 2024 Mini Challenge 3: Temporal Analysis"
 ---
 
-This is a Quarto website use to show case group project from ISSS608-VAA
+Mini-challenge 3 concerns visualizing changes in business relationships within the commercial fishing industry. FishEye wants to understand how companies react to the closure of a competitor caught fishing illegally and how these changes affect influence networks. Design visualizations to show these changes over time and identify companies that may benefit from illegal fishing.
+
+Please visit [VAST Challenge 2024: Mini-Challenge 3](https://vast-challenge.github.io/2024/MC3.html) for more information and to download the data.
+
+![](pexels-dodogr8-916405.jpg)
