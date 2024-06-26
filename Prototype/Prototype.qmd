@@ -780,3 +780,212 @@ To summarize the observations above
 :::
 
 # V. Task 3
+
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+mc3_nodes_id <- mc3_nodes %>%
+  rename(label = id) %>%
+  mutate(id = row_number()) %>%
+  select(id, label, nodes_type)
+
+glimpse(mc3_nodes_id)
+unique(mc3_nodes_id$nodes_type)
+```
+
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+
+nodes_type_id <- mc3_nodes_id %>%
+  select(id, label)
+
+mc3_edges_id <- mc3_edges %>%
+  left_join(nodes_type_id, by = c("source" = "label")) %>%
+  rename(from = id) %>%
+  left_join(nodes_type_id, by = c("target" = "label")) %>%
+  rename(to = id) %>%
+  select(from, to, source, target, nodes_type_source, nodes_type_target,type, start_date)
+
+mc3_edges_id$width <- with(mc3_edges_id, 
+                           ifelse(str_detect(type, 'Event.Owns.BeneficialOwnership'),
+                                  '0.9',
+                                  ifelse(str_detect(type, 'Event.Owns.Shareholdership'),
+                                         '0.1','0.01')))
+mc3_edges_id$label <- with(mc3_edges_id, 
+                           ifelse(str_detect(type, 'Event.Owns.BeneficialOwnership'),
+                                  'BO',
+                                  ifelse(str_detect(type, 'Event.Owns.Shareholdership'),
+                                         'SH',
+                                         ifelse(str_detect(type, 'Event.WorksFor'),
+                                         'WF', 'F'))))
+mc3_edges_id$font.color <- with(mc3_edges_id, 
+                           ifelse(str_detect(type, 'Event.Owns.BeneficialOwnership'),
+                                  'red',
+                                  ifelse(str_detect(type, 'Event.Owns.Shareholdership'),
+                                         'blue',
+                                         ifelse(str_detect(type, 'Event.WorksFor'),
+                                         'lightblue', 'yellow'))))
+  
+```
+
+
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+
+filter_date ='2036-01-01'
+relationship = 48
+
+```
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+relationship_count <- mc3_edges %>%
+  filter(type %in% c("Event.Owns.BeneficialOwnership",
+                     "Event.Owns.Shareholdership",
+                     "Event.WorksFor",
+                     "Relationship.FamilyRelationship")) %>%
+  filter(start_date <= filter_date) %>%
+  group_by(start_date, target) %>%
+  summarise(count = n())%>%
+  group_by(target) %>%
+  mutate(total = cumsum(count)) %>%
+  ungroup()
+
+
+Company_list <- 
+  relationship_count[
+    order(relationship_count$total,
+          decreasing = T),] %>%
+  filter(total>=relationship) %>%
+  select(target) %>%
+  distinct()
+
+```
+
+
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+edges <- mc3_edges_id %>%
+  filter(start_date <= filter_date) %>%
+  filter(target %in% Company_list$target)
+
+nodes <- mc3_nodes_id %>%
+  filter(id %in% edges$from | 
+           id %in% edges$from | 
+           label %in% Company_list$target)
+
+nodes$group <- with(nodes,
+                    ifelse(str_detect(nodes_type, 'Entity.Organization.Company'),
+                                  'Company',
+                           ifelse(str_detect(nodes_type,
+                                             'Entity.Organization.LogisticsCompany'),
+                                  'Logistics Company',
+                                  ifelse(str_detect(nodes_type,
+                                                    'Entity.Organization.FishingCompany'),
+                                         'Fishing Company', 
+                                         ifelse(str_detect(nodes_type,
+                                                    'Entity.Organization.FinancialCompany'),
+                                                'Financial Company',
+                                                ifelse(str_detect(nodes_type,
+                                                    'Entity.Organization.NewsCompany'),
+                                                    'News Company',
+                                                    ifelse(str_detect(nodes_type,
+                                                                      'Entity.Organization.NGO'),
+                                                           'NGO',
+                                                           ifelse(str_detect(nodes_type,
+                                                                             'Entity.Person.CEO'),
+                                                                  'CEO', 
+                                                                  ifelse(str_detect(nodes_type,
+                                                                                    'Entity.Person'),
+                                                                         'Person','Person')
+                                                                  )
+                                                           )
+                                                    )
+                                                )
+                                         )
+                                  )
+                           )
+                    )
+                                         
+                                         
+                                       
+glimpse(edges)
+glimpse(nodes)
+```
+
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+
+
+nodes <- transform(nodes,
+                   `Company` = ifelse(
+                     nodes_type %in% c("Entity.Organization.Company",
+                                       "Entity.Organization.LogisticsCompany",
+                                       "Entity.Organization.FishingCompany",
+                                       "Entity.Organization.FinancialCompany",
+                                       "Entity.Organization.NewsCompany",
+                                       "Entity.Organization.NGO"),
+                     label, ""))
+```
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
+#| 
+visNetwork(nodes, edges) %>%
+  visLayout(randomSeed = 1234) %>%
+  addFontAwesome()%>%
+  visNodes(size = 5) %>%
+  visEdges(selectionWidth = 0.1) %>%
+  visIgraphLayout(layout = "layout_with_fr") %>%
+  visGroups(groupname =  "Company",
+            shape = "icon",
+            icon = list(code = "f1ad",
+                        color = "#ff0000")) %>%
+  visGroups(groupname =  "Logistics Company",
+            shape = "icon",
+            icon = list(code = "f1ad",
+                        color = "#00ff40")) %>%
+  visGroups(groupname =  "Fishing Company",
+            shape = "icon",
+            icon = list(code = "f1ad",
+                        color = "#FFD43B")) %>%
+  visGroups(groupname =  "Financial Company",
+            shape = "icon",
+            icon = list(code = "f1ad",
+                        color = "#ff006f")) %>%
+  visGroups(groupname =  "News Company",
+            shape = "icon",
+            icon = list(code = "f1ad",
+                        color = "#0c0d0d")) %>%
+  visGroups(groupname =  "NGO",
+            shape = "icon",
+            icon = list(code = "f1ad",
+                        color = "#B197FC")) %>%
+  visGroups(groupname =  "Person",
+            shape = "icon",
+            icon = list(code = "f007")) %>%
+  visGroups(groupname =  "CEO",
+            shape = "icon",
+            icon = list(code = "f21b",
+                        color = "#FFD43B")) %>%
+  visEdges(arrows = "to",
+           smooth = list(enabled = TRUE,
+                         type = "curvedCW")) %>%  
+  visLegend(width = 0.15,) %>%
+  visOptions(nodesIdSelection = TRUE,
+             selectedBy = "Company",
+             highlightNearest = list(enabled = T, 
+                                     degree = 2, 
+                                     hover = F))
+```
