@@ -11,6 +11,8 @@ website:
         href: "Prototype/Prototype.html"
       - text: "Poster"
         href: "Poster/Poster.html"
+      - text: "Shiny App"
+        href: "https://haductien1211.shinyapps.io/MC3ShinyAppDemo/"
     right:
       - href: index.qmd
         text: Home
