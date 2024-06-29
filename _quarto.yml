@@ -1,6 +1,6 @@
 project:
   type: website
-
+  
 website:
   title: "ISSS608-VAA-PROJECT"
   navbar:
@@ -19,6 +19,8 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - icon: github
+        href: https://github.com/haductien1211/ISSS608-VAA-PROJECT
 
 format:
   html:
