@@ -1,0 +1,16 @@
+---
+title: "User Guide"
+author: "Group 8: 
+        Ha Duc Tien, 
+        KWOK Pei Shan, 
+        Mohamad Hafez Bin SIDEK"
+date: "May 23, 2024"
+date-modified: "last-modified"
+execute: 
+  eval: true
+  echo: true
+  warning: false
+  freeze: true
+---
+
+![](User Guide.pdf){height=1080 width=1080}
